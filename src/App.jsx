@@ -1,6 +1,11 @@
 
+import About from "./components/About";
+import AllInOne from "./components/AllInOne";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
-import SideBar from "./components/SideBar";
+import Pricing from "./components/Pricing";
+import Support from "./components/Support";
 
 const Menus = [
   { name: "Dashboard", src: "ecl", gap: false },
@@ -16,10 +21,15 @@ const Menus = [
 const App = () => {
 
   return (
-    <div className="">
+    <>
       <NavBar Menus={Menus} />
-      {/* <SideBar Menus={Menus} /> */}
-    </div>
+      <Hero/>
+      <About/>
+      <Support/>
+      <AllInOne/>
+      <Pricing/>
+      <Footer/>
+    </>
 
   )
 }

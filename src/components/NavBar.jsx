@@ -13,9 +13,9 @@ const NavBar = ({ Menus }) => {
         setLogo(!logo)
     }
     return (
-        <div className='flex justify-between items-center h-20  px-4 bg-green-500 '>
+        <div className='flex justify-between items-center h-[80px]   drop-shadow-lg z-10 px-4 w-screen bg-zinc-200 fixed'>
             <div className="">
-                <h1 className={logo ? `hidden` : `text-2xl font-semibold text-white p-2 hover:text-white hover:rounded-md cursor-pointer hover:bg-green-500 md:text-3xl block`}>Dan Tailwind CSS</h1>
+                <h1 className={logo ? `hidden` : `text-2xl font-semibold text-black p-2 hover:text-white hover:rounded-md cursor-pointer hover:bg-indigo-500 md:text-3xl block`}> Tailwind CSS</h1>
             </div>
             {/* MENU ITEMS */}
             <ul className='hidden md:flex'>
@@ -32,7 +32,7 @@ const NavBar = ({ Menus }) => {
                {nav ? <AiOutlineClose size={40}/>: <HiOutlineMenuAlt4 size={40} />}
             </div>
             {/* MOBILE VIEW */}
-            <div onClick={handleNav} className={nav ? `absolute left-0 top-0 w-full bg-green-200/90 px-4 py-7 flex flex-col` : "absolute left-[-100%]"}>
+            <div onClick={handleNav} className={nav ? `absolute left-0 top-0 w-full bg-indigo-200/90 px-4 py-7 flex flex-col` : "absolute left-[-100%]"}>
                 {/* MENU ITEMS */}
                 <ul className='flex flex-col md:hidden'>
                     <h1>Dan</h1>
@@ -40,8 +40,8 @@ const NavBar = ({ Menus }) => {
                         <li className='border-b' key={index}>{menu.name}</li>
                     ))}
                     <div className='flex flex-col'>
-                        <button className='my-6'>Search</button>
-                        <button>Account</button>
+                        <button className='my-6 mx-2'>Search</button>
+                        <button className='my-0 mx-2'>Account</button>
                     </div>
                     <div className='flex justify-between my-3'>
                        <FaFacebook className='icon'/>
