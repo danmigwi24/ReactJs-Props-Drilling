@@ -3,12 +3,14 @@ import { BsPerson } from "react-icons/bs"
 import { AiOutlineClose } from "react-icons/ai"
 import { BiSearch } from "react-icons/bi"
 import { HiOutlineMenuAlt4 } from "react-icons/hi"
-import { FaFacebook ,FaTwitter,FaWhatsapp,FaInstagram,FaPinterest,FaYoutube } from "react-icons/fa"
+import { FaFacebook, FaTwitter, FaWhatsapp, FaInstagram, FaPinterest, FaYoutube } from "react-icons/fa"
+
+import { Link, animateScroll as scroll } from 'react-scroll'
 const NavBar = ({ Menus }) => {
 
     const [nav, setNav] = useState(false)
     const [logo, setLogo] = useState(false)
-    const handleNav=()=>{
+    const handleNav = () => {
         setNav(!nav)
         setLogo(!logo)
     }
@@ -19,17 +21,78 @@ const NavBar = ({ Menus }) => {
             </div>
             {/* MENU ITEMS */}
             <ul className='hidden md:flex'>
-                {Menus.map((menu, index) => (
-                    <li key={index}>{menu.name}</li>
-                ))}
+                {/* {Menus.map((menu, index) => (
+                    <li key={index}>
+                        <Link
+                            to="home"
+                            smooth={true}
+                            offset={50}
+                            duration={500}
+                        >
+                            {menu.name}
+                        </Link>
+                    </li>
+                ))} */}
+
+                <li>
+                    <Link
+                        to="home"
+                        smooth={true}
+                        offset={50}
+                        duration={500}
+                    >
+                        Home
+                    </Link>
+                </li>
+
+                <li>
+                    <Link
+                        to="support"
+                        smooth={true}
+                        offset={50}
+                        duration={500}
+                    >
+                        Support
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="pricing"
+                        smooth={true}
+                        offset={50}
+                        duration={500}
+                    >
+                        Pricing
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="allinone"
+                        smooth={true}
+                        offset={50}
+                        duration={500}
+                    >
+                        Platforms
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="contact"
+                        smooth={true}
+                        offset={50}
+                        duration={500}
+                    >
+                        Contact
+                    </Link>
+                </li>
             </ul>
             <div className=" m-2 hidden md:flex">
                 <BiSearch className='mx-2' />
                 <BsPerson />
             </div>
             {/* MENU ICON */}
-            <div onClick={()=>handleNav()}className='block md:hidden z-10'>
-               {nav ? <AiOutlineClose size={40}/>: <HiOutlineMenuAlt4 size={40} />}
+            <div onClick={() => handleNav()} className='block md:hidden z-10'>
+                {nav ? <AiOutlineClose size={40} /> : <HiOutlineMenuAlt4 size={40} />}
             </div>
             {/* MOBILE VIEW */}
             <div onClick={handleNav} className={nav ? `absolute left-0 top-0 w-full bg-indigo-200/90 px-4 py-7 flex flex-col` : "absolute left-[-100%]"}>
@@ -44,12 +107,12 @@ const NavBar = ({ Menus }) => {
                         <button className='my-0 mx-2'>Account</button>
                     </div>
                     <div className='flex justify-between my-3'>
-                       <FaFacebook className='icon'/>
-                       <FaTwitter className='icon'/>
-                       <FaInstagram className='icon'/>
-                       <FaWhatsapp className='icon'/>
-                       <FaPinterest className='icon'/>
-                       <FaYoutube className='icon'/>
+                        <FaFacebook className='icon' />
+                        <FaTwitter className='icon' />
+                        <FaInstagram className='icon' />
+                        <FaWhatsapp className='icon' />
+                        <FaPinterest className='icon' />
+                        <FaYoutube className='icon' />
                     </div>
                 </ul>
             </div>
