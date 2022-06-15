@@ -2,7 +2,7 @@ import React from 'react'
 
 import { CloudUploadIcon, DatabaseIcon, PaperAirplaneIcon, ServerIcon } from '@heroicons/react/solid'
 import bgImag from '../assets/cyber-bg.png'
-const Hero = () => {
+const Home = () => {
     return (
         <div name='home' className='w-full h-screen bg-zinc-200 flex  flex-col justify-between'>
 
@@ -18,7 +18,7 @@ const Hero = () => {
                     <img className='w-full' src={bgImag} alt="/" />
                 </div>
 
-                <div className='absolute flex flex-col py-8 md:min-w-[760px] bottom-[-10%] mx-1 md:left-1/2  md:-translate-x-1/2 bg-zinc-200 border border-slate-300 rounded-xl text-center shadow-xl'>
+                <div className='absolute flex flex-col py-8 md:min-w-[760px] bottom-[-10%] mx-3 md:left-1/2  md:-translate-x-1/2 bg-zinc-200 border border-slate-300 rounded-xl text-center shadow-xl'>
                     <p>Data Service</p>
                     <div className=' flex justify-between flex-wrap px-4'>
                         <p className='flex px-4 py-2 text-slate-500'><CloudUploadIcon className ="h-6"/> App Security</p>
@@ -32,4 +32,4 @@ const Hero = () => {
     )
 }
 
-export default Hero
+export default Home

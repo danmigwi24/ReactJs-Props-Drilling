@@ -2,7 +2,10 @@
 import About from "./components/About";
 import AllInOne from "./components/AllInOne";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
+import Home from "./components/Home";
+import LoginOne from "./components/login/LoginOne";
+import LoginThree from "./components/login/LoginThree";
+import LoginTwo from "./components/login/LoginTwo";
 import NavBar from "./components/NavBar";
 import Pricing from "./components/Pricing";
 import Support from "./components/Support";
@@ -22,13 +25,16 @@ const App = () => {
 
   return (
     <>
-      <NavBar Menus={Menus} />
-      <Hero/>
+    <LoginOne/>
+    <LoginTwo/>
+    <LoginThree/>
+      {/* <NavBar Menus={Menus} />
+      <Home/>
       <About/>
       <Support/>
       <AllInOne/>
       <Pricing/>
-      <Footer/>
+      <Footer/> */}
     </>
 
   )
