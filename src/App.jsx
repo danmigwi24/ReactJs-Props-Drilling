@@ -25,16 +25,16 @@ const App = () => {
 
   return (
     <>
-    <LoginOne/>
+    {/* <LoginOne/>
     <LoginTwo/>
-    <LoginThree/>
-      {/* <NavBar Menus={Menus} />
+    <LoginThree/> */}
+      <NavBar Menus={Menus} />
       <Home/>
       <About/>
       <Support/>
       <AllInOne/>
       <Pricing/>
-      <Footer/> */}
+      <Footer/>
     </>
 
   )
